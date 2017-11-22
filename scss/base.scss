@@ -1,0 +1,113 @@
+/* Colours */
+$C_MIDTONE:     #333333;
+$C_HIGHTONE:    #777777;
+$C_LOWTONE:     #111111;
+$C_RED_MIDTONE: #330000;
+
+/* Devices */
+$breakpoint-laptop:     1024px;
+$breakpoint-tablet:     758px;
+$breakpoint-mobile-l:   425px;
+$breakpoint-mobile-m:   375px;
+$breakpoint-mobile-s:   320px;
+
+/* General Defines */
+$FONT_SIZE: 16px;
+
+/* Menu Defines */
+$HEADER_HEIGHT: 128px;
+$MENU_HEIGHT: 32px;
+
+/* BASE ELEMENTS */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    min-height: 100%;
+    font-size: $FONT_SIZE;
+}
+
+/* CUSTOM CLASSES */
+
+/* Misc */
+.page-container {
+    display: flex;  // doubles as both flex container and child
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1 0 auto;
+}
+
+.page {
+    position: relative;
+    flex: 1 0 auto;
+    background: $C_HIGHTONE;
+    width: 40%;
+
+    @media (min-width: $breakpoint-laptop) {
+        min-width: 500px;
+    }
+}
+
+.backdrop {
+    flex: 1 1 auto;
+    background: $C_LOWTONE;
+    z-index: 500;
+    box-shadow: 0 0 20px 5px $C_LOWTONE;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        display: none !important;
+    }
+}
+
+/* Header */
+.header-container {
+    position: sticky;
+    top: ($HEADER_HEIGHT - $MENU_HEIGHT) * -1;  // Sticky the menu 
+    z-index: 1000;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        position: fixed;
+        top: 0; 
+        width: 100%;
+    }
+}
+
+.header {
+    background: $C_MIDTONE;
+    min-height: $MENU_HEIGHT;
+    width: 100%;
+    height: $HEADER_HEIGHT;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        min-height: $MENU_HEIGHT * 2;
+        height: $MENU_HEIGHT * 2;
+    }
+}
+
+.header__menubar {
+    position: absolute;
+    bottom: 0;
+    background: $C_RED_MIDTONE;
+    width: 100%;
+    height: $MENU_HEIGHT;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        height: $MENU_HEIGHT * 2;
+    }
+}
+
+/* Footer */
+.footer-container {
+    position: relative;
+    z-index: 1000;   
+}
+
+.footer {
+    background: $C_MIDTONE;
+    min-height: 64px; 
+}
