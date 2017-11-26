@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript", src="scripts/debug.js"></script>
     <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
 
+<div class="debug">
+    <label for="debug-btn" class="text">Debug</label>
+    <input type="checkbox" id="debug-btn">
+</div>
+
 <div class="header-container">
     <!-- Page header, contains navigation menu -->
     <div class="header">
-        <div class="header__menubar"></div>
+        <div class="header__menubar">
+        </div>
     </div>
 </div>
 
 <div class="page-container">
     <div class="backdrop"></div>
-    <div class="page"></div>
+    <div class="page">
+
+        <!-- Main Page Content -->
+        <div class="parallax">
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--back background--parchment">
+                    <span class="text--center">back</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <div class="backdrop"></div>
 </div>
 
