@@ -43,14 +43,9 @@ body {
 }
 
 .page {
-    position: relative;
     flex: 1 0 auto;
     background: $C_HIGHTONE;
     width: 40%;
-
-    @media (min-width: $breakpoint-laptop) {
-        min-width: 500px;
-    }
 }
 
 .backdrop {
@@ -64,24 +59,25 @@ body {
     }
 }
 
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Header */
 .header-container {
-    position: sticky;
-    top: ($HEADER_HEIGHT - $MENU_HEIGHT) * -1;  // Sticky the menu 
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
-
-    @media (max-width: $breakpoint-mobile-l) {
-        position: fixed;
-        top: 0; 
-        width: 100%;
-    }
 }
 
 .header {
     background: $C_MIDTONE;
     min-height: $MENU_HEIGHT;
     width: 100%;
-    height: $HEADER_HEIGHT;
 
     @media (max-width: $breakpoint-mobile-l) {
         min-height: $MENU_HEIGHT * 2;
@@ -103,7 +99,9 @@ body {
 
 /* Footer */
 .footer-container {
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     z-index: 1000;   
 }
 
