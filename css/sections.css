@@ -1,0 +1,38 @@
+/* Core */
+.outer-section-container {
+  width: 100%; }
+
+.section-container {
+  position: relative;
+  width: 100%; }
+
+.section-container--full {
+  height: 700px;
+  height: 100vh; }
+
+.section-container--small {
+  height: 200px;
+  height: 20vh; }
+
+/* Absolute clipped sections */
+.section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0 auto auto 0); }
+
+.section__basic {
+  background: yellow; }
+
+.section__runic {
+  background: red; }
+
+/* Fixed content sections */
+.content-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+/*# sourceMappingURL=sections.css.map */
