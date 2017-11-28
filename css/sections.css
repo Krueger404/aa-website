@@ -1,31 +1,24 @@
+/**
+ * https://github.com/krueger404/aa-website
+ * @license apache 2.0 licensed
+ * Copyright (c) 2017 Oliver Carson
+ */
 /* Core */
-.outer-section-container {
-  width: 100%; }
-
 .section-container {
+  width: 100%;
+  height: 100%; }
+
+.section {
   position: relative;
-  width: 100%; }
-
-.section-container--full {
-  height: 700px;
-  height: 100vh; }
-
-.section-container--small {
-  height: 200px;
-  height: 20vh; }
+  width: 100%;
+  height: 100%; }
 
 /* Absolute clipped sections */
-.section {
+.section__clip {
   position: absolute;
   width: 100%;
   height: 100%;
   clip: rect(0 auto auto 0); }
-
-.section__basic {
-  background: yellow; }
-
-.section__runic {
-  background: red; }
 
 /* Fixed content sections */
 .content-container {
@@ -34,5 +27,11 @@
   height: 100%;
   top: 0;
   left: 0; }
+
+.content-container--basic {
+  background: yellow; }
+
+.content-container--runic {
+  background: red; }
 
 /*# sourceMappingURL=sections.css.map */

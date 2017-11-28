@@ -1,3 +1,9 @@
+/**
+ * https://github.com/krueger404/aa-website
+ * @license apache 2.0 licensed
+ * Copyright (c) 2017 Oliver Carson
+ */
+
 /* Colours */
 $C_MIDTONE:     #333333;
 $C_HIGHTONE:    #777777;
@@ -46,6 +52,10 @@ body {
     flex: 1 0 auto;
     background: $C_HIGHTONE;
     width: 40%;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        width: 100%;
+    }
 }
 
 .backdrop {

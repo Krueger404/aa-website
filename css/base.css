@@ -1,3 +1,8 @@
+/**
+ * https://github.com/krueger404/aa-website
+ * @license apache 2.0 licensed
+ * Copyright (c) 2017 Oliver Carson
+ */
 /* Colours */
 /* Devices */
 /* General Defines */
@@ -26,6 +31,9 @@ body {
   flex: 1 0 auto;
   background: #777777;
   width: 40%; }
+  @media (max-width: 425px) {
+    .page {
+      width: 100%; } }
 
 .backdrop {
   flex: 1 1 auto;
