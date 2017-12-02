@@ -8,6 +8,10 @@
 /* General Defines */
 /* Menu Defines */
 /* Page Defines */
+/* Fonts */
+@font-face {
+  font-family: "HaloHandletter";
+  src: url("/fonts/HaloHandletter.otf"); }
 /* BASE ELEMENTS */
 html {
   height: 100%; }
@@ -18,7 +22,8 @@ body {
   flex-wrap: nowrap;
   margin: 0;
   min-height: 100%;
-  font-size: 16px; }
+  font-size: 32px;
+  font-family: "HaloHandletter", sans-serif; }
 
 /* CUSTOM CLASSES */
 /* Misc */
@@ -35,8 +40,7 @@ body {
 .backdrop {
   flex: 1 1 auto;
   background: #111111;
-  z-index: 500;
-  box-shadow: 0 0 20px 5px #111111; }
+  z-index: 500; }
   @media (max-width: 425px) {
     .backdrop {
       display: none !important; } }
@@ -90,7 +94,10 @@ body {
 
 .footer {
   background: #333333;
-  min-height: 64px; }
+  height: 32px; }
+  @media (max-width: 425px) {
+    .footer {
+      height: 32px; } }
 
 /* Sections */
 .section-container {
@@ -113,18 +120,23 @@ body {
   position: fixed;
   top: 0;
   width: 60%;
-  height: 100%; }
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-bottom: 32px; }
   @media (max-width: 425px) {
     .content-container {
-      width: 100%; } }
+      width: 100%;
+      padding-top: 64px;
+      padding-bottom: 32px; } }
+
+.content-container__parchment {
+  height: 100%;
+  background-image: url("/images/parchment.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
 
 .content {
   flex: 0 0 auto; }
-
-.content-container--basic {
-  background: yellow; }
-
-.content-container--runic {
-  background: red; }
 
 /*# sourceMappingURL=base.css.map */
