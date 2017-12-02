@@ -18,11 +18,20 @@ $breakpoint-mobile-m:   375px;
 $breakpoint-mobile-s:   320px;
 
 /* General Defines */
-$FONT_SIZE: 16px;
+$FONT_SIZE: 32px;
 
 /* Menu Defines */
-$HEADER_HEIGHT: 128px;
 $MENU_HEIGHT: 32px;
+$FOOTER_HEIGHT: 32px;
+
+/* Page Defines */
+$PAGE_WIDTH: 40%;
+
+/* Fonts */
+@font-face {
+    font-family: "HaloHandletter";
+    src: url("/fonts/HaloHandletter.otf");
+}
 
 /* BASE ELEMENTS */
 html {
@@ -36,33 +45,28 @@ body {
     margin: 0;
     min-height: 100%;
     font-size: $FONT_SIZE;
+    font-family: "HaloHandletter", sans-serif;
 }
 
 /* CUSTOM CLASSES */
 
 /* Misc */
-.page-container {
-    display: flex;  // doubles as both flex container and child
+.page-container {  // doubles as both flex container and child
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     flex: 1 0 auto;
 }
 
 .page {
-    flex: 1 0 auto;
+    flex: 3 0 auto;
     background: $C_HIGHTONE;
-    width: 40%;
-
-    @media (max-width: $breakpoint-mobile-l) {
-        width: 100%;
-    }
 }
 
 .backdrop {
     flex: 1 1 auto;
     background: $C_LOWTONE;
     z-index: 500;
-    box-shadow: 0 0 20px 5px $C_LOWTONE;
 
     @media (max-width: $breakpoint-mobile-l) {
         display: none !important;
@@ -74,6 +78,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.flex-container--centered {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Header */
@@ -117,5 +130,56 @@ body {
 
 .footer {
     background: $C_MIDTONE;
-    min-height: 64px; 
+    height: $FOOTER_HEIGHT;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        height: $FOOTER_HEIGHT;
+    }
 }
+
+/* Sections */
+.section-container {
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section__clip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0 auto auto 0);
+}
+
+/* Fixed content */
+.content-container {
+    position: fixed;
+    top: 0;
+    width: 60%; // Page:Backdrop flex is 3:2, therefore 60%
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: $MENU_HEIGHT;
+    padding-bottom: $FOOTER_HEIGHT;
+
+    @media (max-width: $breakpoint-mobile-l) {
+        width: 100%;
+        padding-top: $MENU_HEIGHT * 2;
+        padding-bottom: $FOOTER_HEIGHT;
+    }
+}
+
+.content-container__parchment {
+    height: 100%;
+    background-image: url("/images/parchment.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.content {
+    flex: 0 0 auto;
+}
+
