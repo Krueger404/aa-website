@@ -5,6 +5,7 @@
  */
 /* Colours */
 /* Devices */
+/* Pathnames */
 /* General Defines */
 /* Menu Defines */
 /* Page Defines */
@@ -132,7 +133,7 @@ body {
 
 .content-container__parchment {
   height: 100%;
-  background-image: url("/images/parchment.png");
+  background-image: url("../images/parchment.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
 

@@ -17,6 +17,10 @@ $breakpoint-mobile-l:   425px;
 $breakpoint-mobile-m:   375px;
 $breakpoint-mobile-s:   320px;
 
+/* Pathnames */
+$PARCHMENT: "../images/parchment.png";
+$HALOHANDLETTER: "/fonts/HaloHandletter.otf";
+
 /* General Defines */
 $FONT_SIZE: 32px;
 
@@ -30,7 +34,7 @@ $PAGE_WIDTH: 40%;
 /* Fonts */
 @font-face {
     font-family: "HaloHandletter";
-    src: url("/fonts/HaloHandletter.otf");
+    src: url($HALOHANDLETTER);
 }
 
 /* BASE ELEMENTS */
@@ -175,7 +179,7 @@ body {
 
 .content-container__parchment {
     height: 100%;
-    background-image: url("/images/parchment.png");
+    background-image: url($PARCHMENT);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
