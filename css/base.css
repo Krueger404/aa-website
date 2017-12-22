@@ -12,7 +12,7 @@
 /* Fonts */
 @font-face {
   font-family: "HaloHandletter";
-  src: url("/fonts/HaloHandletter.otf"); }
+  src: url("/aa-website/fonts/HaloHandletter.otf"); }
 /* BASE ELEMENTS */
 html {
   height: 100%; }
@@ -133,7 +133,7 @@ body {
 
 .content-container__parchment {
   height: 100%;
-  background-image: url("../images/parchment.png");
+  background-image: url("/aa-website/images/parchment.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
 
