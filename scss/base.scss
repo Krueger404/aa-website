@@ -18,8 +18,10 @@ $breakpoint-mobile-m:   375px;
 $breakpoint-mobile-s:   320px;
 
 /* Pathnames */
-$PARCHMENT: "../images/parchment.png";
-$HALOHANDLETTER: "/fonts/HaloHandletter.otf";
+//$DIRECTORY: "";
+$DIRECTORY: "/aa-website";    // Used for github pages hosting
+$PARCHMENT: $DIRECTORY + "/images/parchment.png";
+$HALOHANDLETTER: $DIRECTORY + "/fonts/HaloHandletter.otf";
 
 /* General Defines */
 $FONT_SIZE: 32px;
